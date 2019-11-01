@@ -1,0 +1,1022 @@
+/* 我的优购 */
+.module {
+    width: 100%;
+    margin-bottom: 6px;
+}
+
+.module .hd {
+    /* height:70px; */
+    padding: 12px 18px;
+    overflow: hidden;
+    margin-bottom: 0;
+    background: #077f8d;
+    color: #fff;
+    background: url(http://m.yougou.com/images/myYG/top-backgroundc.jpg) center center no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+.module .hd p {
+    padding-left: 25px;
+    width: 100%;
+    font-size: 16px;
+    line-height: 24px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    color:#fff;
+}
+
+.module .hd span {
+    display: block;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.module .hd span em {
+    /*float: right;*/
+    position: absolute;
+    color: black;
+    bottom: 8px;
+    right: 12px;
+}
+
+.module .bd {
+    /* height:50px; */
+    overflow: hidden;
+}
+
+.module .bd .prowrdlst a {
+    width: 50%;
+    float: left;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    /* height:34px; */
+    border: none;
+}
+
+.module .bd .prowrdlst .qian {
+    border-right: 1px solid #ddd;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+.module .bd .prowrdlst a p {
+    line-height: 20px;
+    font-size: 14px;
+    color: #666;
+}
+
+.prowrdlst {
+    padding: 8px 0;
+    overflow: hidden;
+    background: #fff;
+}
+
+.module .bd .prowrdlst a .red {
+    color: #ff0000;
+    font-size: 16px;
+}
+
+.module .bd .prowrdlst a .gray {
+    color: #333;
+    font-size: 16px;
+}
+
+.myindex nav li {
+    width: 100%;
+    float: none;
+    border-right: none;
+    position: relative;
+}
+
+.myindex nav li:before {
+    content: '';
+    width: 8px;
+    height: 12px;
+    position: absolute;
+    right: 6px;
+    top: 20px;
+    background: url(http://m.yougou.com/images/myYG/open.png) center center no-repeat;
+    background-size: 8px 12px;
+    -webkit-background-size: 8px 12px;
+}
+
+.clearfix p {
+    font-size: 14px;
+}
+
+nav {
+    background: #eee;
+}
+
+nav a {
+    text-align: left;
+    padding: 0 6px;
+    height: 50px;
+    line-height: 50px;
+}
+
+nav ul {
+    border: none;
+    padding: 6px 12px;
+    margin-bottom: 6px;
+    background: #fff;
+}
+
+nav ul li img {
+    margin: 10px 6px 0 0;
+}
+
+/* .clearfix p {
+    display: inline-block;
+} */
+
+.myindex nav .noLine {
+    border-bottom: none;
+}
+
+.userList,
+.userListOnly {
+    background-color: #fff;
+}
+
+.userList,
+.userListOnly {
+    margin-bottom: 6px;
+}
+
+.userOrder {
+    margin-bottom: 0;
+}
+
+.userList a.userOrderLink,
+.userListOnly a {
+    border-top: 1px solid #f0f1f2;
+    border-bottom: 1px solid #f0f1f2;
+}
+
+.userOrder a {
+    border-top: none;
+    border-bottom: 1px solid #ddd;
+}
+
+.userList a.userOrderLink,
+.userListOnly a {
+    display: block;
+    padding: 8px 18px;
+    font-size: 16px;
+    position: relative;
+    color: #333;
+}
+
+.userList a.userOrderLink {
+    border-bottom: 1px solid #ddd;
+}
+
+.userOrderCon {
+    padding: 15px 0 10px;
+    /*border-bottom:1px solid #ddd;*/
+}
+
+.userOrderCon a,
+.userWallet a {
+    display: block;
+    width: 25%;
+    float: left;
+    text-align: center;
+}
+
+.userOrderConThree a {
+    width: 25%;
+    position: relative;
+}
+
+.userOrderConThree a img,
+.userWallet a img {
+    width: 26px;
+}
+
+.userWallet a img {
+    width: 23px;
+}
+
+.userOrderConThree a b {
+    position: relative;
+    margin-bottom: 5px;
+    display: inline-block;
+    height: 20px;
+    color:#666;
+}
+
+.userOrderConThree a i {
+    font-style: normal;
+    min-width: 18px;
+    padding: 1px 0;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    display: block;
+    line-height: none;
+    font-size: 11px;
+    background-color: #ff0000;
+    color: #fff;
+    border-radius: 20px;
+}
+
+.userOrderCon a em,
+.userList a.userOrderLink em,
+.userListOnly a em,
+.userWallet a em {
+    font-style: normal;
+    display: block;
+}
+
+.userOrderCon a em,
+.userWallet a em {
+    padding-top: 7px;
+    font-size: 13px;
+    color: #333;
+}
+
+.userList a.userOrderLink em,
+.userListOnly a em {
+    position: absolute;
+    top: 12px;
+    right: 22px;
+    font-size: 12px;
+    color: #a0a0a0;
+}
+
+.userWallet a {
+    font-size: 16px;
+}
+
+.userWallet a b {
+    display: block;
+    min-height: 28px;
+    line-height: 28px;
+    color: #333;
+}
+
+.userWallet a.myYou b {
+    padding-top: 2px;
+    min-height: 25px;
+    line-height: 25px;
+}
+
+.userWallet a em {
+    font-size: 14px;
+}
+
+.userList a.userOrderLink:after,
+.userListOnly a:after,
+.myUserInfor li:after,
+.myUserInfor .listMore:after {
+    content: '';
+    width: 9px;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    background: url(http://m.yougou.com/images/myYG/gray-open.png) center center no-repeat;
+    background-size: 8px auto;
+}
+
+.myWallet a.userOrderLink:after {
+    background: none;
+}
+
+.myUserInfor .listMoreNone:after {
+    background: none;
+}
+
+.myUserInfor li:after {
+    background: url(http://m.yougou.com/images/myYG/open.png) center center no-repeat;
+    background-size: 8px auto;
+    right: 18px;
+}
+
+.userListOnly a {
+    font-size: 15px;
+    height: 30px;
+    line-height: 30px;
+    padding: 10px 0 10px 60px;
+}
+
+.userListOnly a.myUserCenter {
+    background: url(http://m.yougou.com/images/myYG/vip-.png) 18px center no-repeat;
+    background-size: 30px auto;
+}
+
+.userListOnly a.myFavorites {
+    background: url(http://m.yougou.com/images/myYG/collection.png) 18px center no-repeat;
+    background-size: 30px auto;
+}
+
+.userListOnly a.helpIndex {
+    background: url(http://m.yougou.com/images/myYG/help.png) 18px center no-repeat;
+    background-size: 30px auto;
+}
+
+.userListOnly a.gotoContactCustomer {
+    background: url(http://m.yougou.com/images/myYG/service.png) 18px center no-repeat;
+    background-size: 30px auto;
+}
+
+.userListOnly a.gotoFeedback {
+    background: url(http://m.yougou.com/images/myYG/repair.png) 18px center no-repeat;
+    background-size: 30px auto;
+    border-bottom: none;
+}
+
+.module .hd p {
+    background: url(http://m.yougou.com/images/myYG/user.png) left 2px no-repeat;
+    background-size: 20px auto;
+}
+
+.module .hd .moduleManage p {
+    background: none;
+    padding-left: 0;
+}
+
+.module .hd {
+    padding: 12px;
+    height: 89px;
+    position: relative;
+}
+
+.module .hd span b {
+    font-style: normal;
+    font-weight: 100;
+    padding: 3px 6px;
+    border-radius: 12px;
+    background-color: #9a2006;
+    color: #fff;
+}
+
+/*账户管理*/
+.marginp {
+    height: 8px;
+    /*border-top:1px solid #e3e5e9;border-bottom:1px solid #e3e5e9;*/
+}
+
+.module,
+.userList,
+.userListOnly {
+    margin-bottom: 0px;
+}
+
+.myUserInfor li {
+    border-bottom: 1px solid #ddd;
+}
+
+.myUserInfor li a {
+    display: block;
+    padding: 15px 18px;
+    font-size: 15px;
+    /*background:url(../images/veriphone/arrow_right.png) 95% center no-repeat;background-size:9px auto;*/
+}
+
+.myUserInfor li {
+    position: relative;
+}
+
+.myUserInforAddress li {
+    border: none;
+}
+
+.myUserP {
+    height: 8px;
+    /*border-top:1px solid #e3e5e9;border-bottom:1px solid #e3e5e9;*/
+    background: #eee;
+}
+
+.itemfoucs {
+    background: #555;
+}
+
+/* 我的账户新改样式 */
+.myUserN {
+    overflow: hidden;
+    width: 100%;
+    height: 52px;
+    line-height: 52px;
+    border-bottom: 1px solid #ddd;
+    padding: 0 18px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    margin-bottom: 8px;
+}
+
+.myUserInfor {
+    background: #eee;
+}
+
+.myUserInfor ul {
+    overflow: hidden;
+    background: #fff;
+}
+
+.myUserN p {
+    font-size: 15px;
+}
+
+.myUserN li {
+    border: none;
+}
+
+.myUserN .nameUser {
+    color: #999;
+    font-size: 14px;
+}
+
+.myUserN p.nameDi {
+    position: relative;
+    padding-right: 16px;
+    font-size: 12px;
+    color: #999;
+}
+
+.myUserInfor li .nameDi:after {
+    content: '';
+    width: 9px;
+    height: 100%;
+    position: absolute;
+    text-align: right;
+    height: 52px;
+    background: url(http://m.yougou.com/images/myYG/open.png) center center no-repeat;
+    background-size: 8px auto;
+    right: 0;
+}
+
+#waitLoadingBg {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.5);
+    top: 0;
+    left: auto;
+    z-index: 99;
+    max-width: 640px;
+    display: none;
+}
+
+.sexWarp {
+    width: 100%;
+    height: auto;
+    position: fixed;
+    bottom: 0;
+    max-width: 640px;
+    left: auto;
+    z-index: 100;
+    background: rgba(0, 0, 0, 0);
+    color: #333;
+    text-align: center;
+    display: none;
+    font-size: 16px;
+}
+
+.sexWarp p {
+    background: #fff;
+    height: 50px;
+    line-height: 50px;
+    border-bottom: 1px solid #ddd;
+    color: #2584EB;
+}
+
+.sexWarp p.on {
+    color: #ff0000;
+}
+
+.btn {
+    width: 90%;
+    margin: 10px 0 10px 5%;
+    background: #fff;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 10px;
+    color: #2584EB;
+}
+
+.pWarp {
+    width: 90%;
+    margin-left: 5%;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.addressArea {
+    display: none;
+}
+
+.zoneW {
+    height: auto;
+}
+
+#nameData {
+    width: 120px;
+    border: none;
+    color: #666;
+    position: absolute;
+    right: 0;
+    top: 17px;
+    background: #fff;
+}
+
+/* 日期插件样式 */
+.page {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+/*素材家园 - www.sucaijiayuan.com*/
+#datescroll div {
+    float: left;
+    margin-left: 10%;
+    margin-top: 15px;
+    padding-right: 22px;
+}
+
+#datescroll_datetime div {
+    float: left;
+    margin-left: 10%;
+    padding-right: 22px;
+}
+
+#yearwrapper {
+    position: absolute;
+    left: 0;
+    top: 45px;
+    bottom: 60px;
+    width: 80%;
+}
+
+#monthwrapper {
+    position: absolute;
+    left: 26%;
+    top: 45px;
+    bottom: 60px;
+    width: 80%;
+}
+
+#daywrapper {
+    position: absolute;
+    left: 50%;
+    top: 45px;
+    bottom: 60px;
+    width: 80%;
+}
+
+#Hourwrapper {
+    position: absolute;
+    left: 0;
+    top: 195px;
+    bottom: 68px;
+    width: 80%;
+}
+
+#Minutewrapper {
+    position: absolute;
+    left: 26%;
+    top: 195px;
+    bottom: 68px;
+    width: 80%;
+}
+
+#Secondwrapper {
+    position: absolute;
+    left: 50%;
+    top: 195px;
+    bottom: 68px;
+    width: 80%;
+}
+
+/*增加手指滑动触摸面积*/
+#Hourwrapper ul li {
+    color: #898989;
+    font-size: 12px;
+}
+
+#Minutewrapper ul li {
+    color: #898989;
+    font-size: 12px;
+}
+
+#Secondwrapper ul li {
+    color: #898989;
+    font-size: 12px;
+}
+
+#yearwrapper ul li {
+    color: #898989;
+    font-size: 12px;
+}
+
+#monthwrapper ul li {
+    color: #898989;
+    font-size: 12px;
+}
+
+#daywrapper ul li {
+    color: #898989;
+    font-size: 12px;
+}
+
+#markyear {
+    position: relative;
+    margin-left: 76px;
+    top: -2px;
+}
+
+#markmonth {
+    position: relative;
+    margin-left: 40px;
+    top: -2px;
+}
+
+#markday {
+    position: relative;
+    margin-left: 42px;
+    top: -2px;
+}
+
+#markhour {
+    position: relative;
+    margin-left: 62px;
+    top: -2px;
+}
+
+#markminut {
+    position: relative;
+    margin-left: 58px;
+    top: -2px;
+}
+
+#marksecond {
+    position: relative;
+    margin-left: 68px;
+    top: -2px;
+}
+
+#dateheader {
+    width: 100%;
+    height: 50px;
+    background: #79C12F;
+    text-align: center;
+    color: #fff;
+    line-height: 50px;
+    font-size: 20px;
+}
+
+#setcancle ul {
+    text-align: center;
+    line-height: 30px;
+    margin: 1px auto;
+    font-size: 20px;
+}
+
+#setcancle ul li {
+    border-radius: 3px;
+    float: left;
+    width: 40%;
+    height: 30px;
+    list-style-type: none;
+    font-family: 'microsoft yahei';
+    font-size: 16px;
+}
+
+#dateconfirm {
+    position: absolute;
+    background: #79C12F;
+    left: 20px;
+    color: #fff;
+}
+
+#datecancle {
+    position: absolute;
+    background: #dcdddd;
+    right: 20px;
+    width: 40%;
+    color: #666;
+}
+
+#dateshadow {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #000;
+    filter: alpha(Opacity=50);
+    -moz-opacity: 0.5;
+    opacity: 0.5;
+}
+
+#datePage {
+    font-size: 22px;
+    border-radius: 3px;
+    position: absolute;
+    top: 110px;
+    MARGIN-RIGHT: auto;
+    vertical-align: middle;
+    MARGIN-LEFT: auto;
+    width: 80%;
+    ;
+    height: 240px;
+    background: #FFFFFF;
+    z-index: 9999999;
+}
+
+#datetitle {
+    width: 100%;
+    height: 50px;
+    background: #79C12F;
+    text-align: center;
+    color: #fff;
+    line-height: 50px;
+    font-size: 20px;
+    font-family: 'microsoft yahei';
+}
+
+#datetitle h1 {
+    font-weight: normal;
+}
+
+#datemark {
+    font-size: 18px;
+    left: 5%;
+    width: 90%;
+    height: 20px;
+    position: absolute;
+    top: 108px;
+    background: #eee;
+    border: 1px solid #eee;
+}
+
+#timemark {
+    font-size: 18px;
+    left: 5%;
+    width: 90%;
+    height: 20px;
+    position: absolute;
+    top: 242px;
+    background: #eee;
+    border: 1px solid #eee;
+}
+
+#datescroll {
+    background: #F8F8F8;
+    width: 94%;
+    margin: 10px 3%;
+    border: 1px solid #E0E0E0;
+    border-radius: 4px;
+    height: 120px;
+    text-align: center;
+    line-height: 40px;
+}
+
+#datescroll_datetime {
+    display: none;
+    background: #F8F8F8;
+    width: 94%;
+    margin: 10px 3%;
+    margin-top: 10px;
+    border: 1px solid #E0E0E0;
+    border-radius: 4px;
+    height: 120px;
+    text-align: center;
+    line-height: 40px;
+}
+
+#yearwrapper ul,
+#monthwrapper ul,
+#daywrapper ul {
+    width: 40%;
+}
+
+#Hourwrapper ul,
+#Minutewrapper ul,
+#Secondwrapper ul {
+    width: 40%;
+}
+
+#dateFooter {
+    width: 100%;
+    background: #fff;
+    height: 50px;
+    bottom: 0px;
+    position: absolute;
+}
+
+/*我的优购修改*/
+.addressArea {
+    z-index: 1000;
+    background: #fff;
+    width: 100%;
+    margin-top: -20px;
+    box-sizing: border-box;
+    -weblit-box-sizing: border-box;
+    overflow: hidden;
+    max-width: 640px;
+}
+
+.btnW {
+    overflow: hidden;
+    width: 100%;
+}
+
+.sureB {
+    width: 20%;
+    color: #3A94EF;
+    text-align: center;
+    float: left;
+    height: 32px;
+    line-height: 32px;
+    overflow: hidden;
+}
+
+.consoleB {
+    width: 20%;
+    color: #3A94EF;
+    text-align: center;
+    float: right;
+    height: 32px;
+    line-height: 32px;
+    overflow: hidden;
+}
+
+.province {
+    width: 47%;
+    height: 32px;
+    line-height: 32px;
+    margin: 20px 3% 20px 0;
+    float: left;
+    border: 1px solid #ddd;
+    overflow: hidden;
+    box-sizing: border-box;
+    -weblit-box-sizing: border-box;
+}
+
+.city {
+    width: 47%;
+    height: 32px;
+    line-height: 32px;
+    margin: 20px 0 20px 3%;
+    float: right;
+    border: 1px solid #ddd;
+    overflow: hidden;
+    box-sizing: border-box;
+    -weblit-box-sizing: border-box;
+}
+
+.myUserN {
+    margin-bottom: 0;
+}
+
+.zoneW {
+    margin-bottom: 8px;
+}
+
+.myUserN p.sexB {
+    position: relative;
+    padding-right: 16px;
+    font-size: 12px;
+    color: #999;
+}
+
+.myUserInfor li .sexB:after {
+    content: '';
+    width: 9px;
+    height: 100%;
+    position: absolute;
+    text-align: right;
+    height: 52px;
+    background: url(http://m.yougou.com/images/myYG/open.png) center center no-repeat;
+    background-size: 8px auto;
+    right: 0;
+}
+
+.shi {
+    font-size: 12px;
+    color: #999;
+}
+
+.diquW {
+    overflow: hidden;
+}
+
+.myUserInfor li.zone:after {
+    display: none;
+}
+
+.moduleManage {
+    padding-left: 60px;
+}
+
+.bannerImg a,
+.bannerImg a img {
+    display: block;
+}
+
+.bannerImg a img {
+    width: 100%;
+}
+
+.myUserInfor li a,
+.myUserN p {
+    color: #333;
+}
+
+.myUserN p.nameDi,
+.myUserN .nameUser,
+.myUserN p.sexB,
+.myUserN p.nameDi,
+.shi {
+    color: #666;
+}
+
+.zoneW,
+.myUserInforAddress {
+    border-bottom: none;
+}
+
+.myUserN {
+    background: #fff;
+}
+
+.myUserInfor .listMore {
+    position: relative;
+    overflow: hidden;
+}
+
+.myUserInfor .listMore:after {
+    height: 52px;
+    right: 0;
+}
+
+.moduleManage .touX {
+    width: 60px;
+    height: 56px;
+    background: url(http://m.yougou.com/images/myYG/user.png) left center no-repeat;
+    background-size: 50px auto;
+    position: absolute;
+    left: 12px;
+}
+
+
+.moduleManageInfo {
+    display: block;
+    position: absolute;
+    top: 14px;
+    right: 12px;
+    width: 22px;
+    height: 22px;
+    background: url(//i1.ygimg.cn/pics/mobile/touch/images/info/information-small.png) center center no-repeat;
+    background-size: 22px auto;
+}
+
+/* 2017-03-24 zy4 start*/
+.module .hd span b {
+    background-color: #bd2302;
+    display: inline-block;
+}
+
+.module .hd span b.ptuser {
+    padding: 0px 6px;
+    margin-top: 1px;
+}
+
+.module .hd span b.plususer {
+    background: url(http://m.yougou.com/images/myYG/button.png) no-repeat;
+    background-size: 100%;
+    border-radius: 0;
+    line-height: 21px;
+    padding: 1px 6px;
+    color: #7f0f00;
+}
+
+.userOrderConThree a {
+    width: 33%;
+}
+
+.userList .adpic {
+    display: inline-block;
+    height: 125px;
+    width: 100%;
+}
+
+.userList .adpic img {
+    display: inline-block;
+    width: 100%;
+}

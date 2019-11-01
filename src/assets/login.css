@@ -1,0 +1,590 @@
+/*2015.10.13*/
+/*common*/
+/* body {
+    background: #fff;
+} */
+
+*,
+input[type="text"] {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-outline-color: rgba(0, 0, 0, 0);
+    -webkit-text-size-adjust: none;
+}
+
+label {
+    outline: none;
+}
+
+input {
+    outline: none;
+    border: 0;
+    background: none;
+}
+
+::-webkit-input-placeholder {
+    /* WebKit browsers */
+    color: #ccc;
+}
+
+:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: #ccc;
+}
+
+::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: #ccc;
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10+ */
+    color: #ccc;
+}
+
+.loginareaN {
+    margin: 12px 14px 14px;
+}
+
+.loginarea {
+    position: relative;
+    margin-top: -13px;
+}
+
+.loginareaN .add {
+    position: absolute;
+    margin: 11px 6px 11px 12px;
+}
+
+.loginareaN .label,
+.getCodeImgWrap .label {
+    display: block;
+    padding: 0 30px 0 0;
+    width: 100%;
+    box-sizing: border-box;
+    border: 0 none;
+    border-bottom: 1px solid #d9d9d9;
+    /*box-shadow: 1px 1px 0 #f5f5f5;*/
+    margin-top: 12px;
+    position: relative;
+    border-radius: 0;
+    margin-bottom: 15px;
+    color: #333333;
+}
+
+.loginareaN .labelNo,
+.getCodeImgWrap .labelNo {
+    border-bottom: 1px solid #ff4664;
+}
+
+.loginareaN .inptxt,
+.getCodeImgWrap .inptxt {
+    display: block;
+    width: 100%;
+    height: 44px;
+    background: none;
+    font-size: 14px;
+    box-sizing: border-box;
+    line-height: 30px\10;
+    /*padding-left:36px;*/
+    color: #333333;
+}
+
+.userLocal input[placeholder],
+[placeholder],
+*[placeholder] {
+    color: #aaa !important;
+}
+
+.pic_code {
+    display: block;
+    position: absolute;
+    top: 7px;
+    right: 1px;
+    border-left: 1px solid #ddd;
+    padding: 0 6px 0 10px;
+}
+
+.pic_code img {
+    width: 83px;
+}
+
+.pic_warp .label {
+    /*background:#f5f5f5;*/
+    margin: 0;
+}
+
+.pictureCode {
+    width: 60%;
+    padding-left: 5px;
+    margin: 0;
+}
+
+.formtip {
+    color: #ff4664;
+    font-size: 12px;
+}
+
+.cleanInput {
+    display: block;
+    width: 34px;
+    height: 36px;
+    line-height: 36px;
+    background: url(http://m.yougou.com/images/clear.png) center center no-repeat;
+    background-size: 17px auto;
+    position: absolute;
+    top: 4px;
+    display: none;
+}
+
+.cleanInputR {
+    right: 0px;
+}
+
+.cleanInputRR {
+    right: 0px;
+}
+
+.cleanInputRr {
+    right: 100px;
+}
+
+.cleanInputRrr {
+    right: 58px;
+}
+
+/*common*/
+.loginarea .loginother {
+    margin: 26px 18px 10px;
+}
+
+.loginareaN .label,
+input.btn_org[type="button"],
+.loginareaN .button_area .btn_brown {
+    border-radius: 0;
+}
+
+.pic_l,
+.button_area {
+    position: relative;
+}
+
+input.btn_org[type="button"] {
+    height: 32px;
+}
+
+input.none[type="button"] {
+    display: none;
+}
+
+#pictureCode {
+    width: 60%;
+    margin: 0;
+}
+
+.button_area {
+    padding: 0;
+    text-align: center;
+    margin-left: -3px;
+}
+
+input.btn_org[type="button"],
+.loginareaN .button_area .btn_brown {
+    display: block;
+    width: 100%;
+    margin-top: 40px;
+    padding: 0;
+    background: #999;
+    color: #fff;
+    height: 44px;
+    line-height: 30px;
+    font-size: 16px;
+}
+
+.loginotherN,
+.loginotherN .hd {
+    background: none;
+    border: none;
+}
+
+.loginotherN .hd {
+    text-align: center;
+}
+
+.loginotherN .share {
+    text-align: center;
+}
+
+.loginotherN .share a {
+    margin: 0 8%;
+    display: inline-block;
+    width: 38px;
+    height: 38px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 24px;
+    /*border:1px solid #ddd;*/
+}
+
+.loginotherN .share a img {
+    margin: 0;
+    vertical-align: middle;
+}
+
+.loginotherN .hd {
+    background: url(http://m.yougou.com/images/login/point.png) left center repeat-x;
+    margin: 0 30px;
+    margin-top: 90px;
+}
+
+.loginotherN .hd span {
+    background: #fff;
+    display: inline-block;
+    padding: 0 6px;
+    font-size: 10px;
+    text-align: center;
+    color: #a0a0a0;
+}
+
+.elseWay {
+    margin-top: 18px;
+    text-align: center;
+}
+
+.elseWay a {
+    color: #00a0c6;
+    font-size: 14px;
+}
+
+.userLocal {
+    margin: 15px 0 15px;
+}
+
+.userLocal .label {
+    display: inline;
+    background: none;
+    border: none;
+    margin: 0;
+    box-shadow: none;
+}
+
+.userLocal input,
+.userLocal em {
+    vertical-align: middle;
+    font-size: 12px;
+    color: #a0a0a0;
+}
+
+.userLocal em {
+    padding-left: 5px;
+}
+
+.rUserName {
+    display: none;
+}
+
+/*.userLocal{float:right;margin-top:0;}*/
+.userLocal span {
+    position: relative;
+}
+
+.userLocal i {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background: #fff;
+    border: 1px solid #a0a0a0;
+    content: '';
+    border-radius: 15px;
+    vertical-align: middle;
+    margin-top: -1px;
+}
+
+.userLocalH {
+    font-size: 13px;
+}
+
+.userLocalH a {
+    color: #666;
+}
+
+.userLocalH i {
+    border: 1px solid #000;
+    background: #000 url(http://m.yougou.com/images/user_check.jpg) no-repeat center center;
+    background-size: 10px auto;
+}
+
+.loginareaN {
+    margin-top: 5px;
+}
+
+.loginother-Foot {
+    margin-top: 90px;
+    margin-bottom: 20px;
+}
+
+.loginother-Foot a {
+    display: inline-block;
+    width: 32%;
+    height: 13px;
+    line-height: 13px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 9px;
+    color: #a0a0a0;
+}
+
+.loginother-Foot .share-foot {
+    margin: 0 40px;
+    position: relative;
+    text-align: center;
+}
+
+.loginother-Foot .share-foot img {
+    margin-top: -2px;
+    vertical-align: middle;
+}
+
+.loginother-Foot .share-foot span {
+    padding-left: 2px;
+}
+
+.loginother-Foot .share-foot p {
+    width: 32.333333%;
+    display: inline-block;
+}
+
+/*手机快捷登录*/
+.elseWay a {
+    display: inline-block;
+}
+
+.loginTypeWrap {
+    overflow: hidden;
+    position: relative;
+    padding: 0 14px;
+}
+
+.loginTypeWrap .loginType {
+    float: left;
+    width: 50%;
+    text-align: center;
+    padding-top: 22px;
+    font-size: 14px;
+    border-bottom: 1px solid #d9d9d9;
+    position: relative;
+}
+
+.loginTypeWrap .loginType span {
+    display: block;
+    height: 100%;
+    width: 100%;
+    border-bottom: 1px solid #fff;
+    line-height: 35px;
+    height: 35px;
+    color: #333;
+}
+
+.loginTypeWrap .loginTypeHover span {
+    color: #ff4664;
+}
+
+.loginTypeWrap .loginTypeHover,
+.loginTypeWrap .loginTypeHover span {
+    border-bottom: 1px solid #ff4664;
+}
+
+.getIphoneCode,
+.getCodeImgWrap .pic_code {
+    width: 92px;
+    height: 30px;
+    line-height: 30px;
+    padding: 0;
+    position: absolute;
+    top: 7px;
+    right: 0;
+    margin: 0;
+    background: none;
+    font-size: 13px;
+    color: #333;
+    border-left: 1px solid #ddd;
+}
+
+.loginareaN .jusernamePhone .label {
+    padding-right: 122px;
+    width: 100%;
+}
+
+.loginareaN .jusernamePhone .label .cleanInput {
+    right: 92px;
+}
+
+#SubmitBtn {
+    background: #ff4664;
+}
+
+.maskWrap {
+    background: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    max-width: 640px;
+    height: 100%;
+    z-index: 10;
+    display: none;
+    max-width: 640px;
+}
+
+.getIphoneCode {
+    color: #ccc;
+}
+
+/*图形验证码弹出层*/
+.getCodeImgWrap {
+    width: 60%;
+    max-width: 400px;
+    /*height:136px;*/
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -108px;
+    /*margin-left:-30%;*/
+    border-radius: 5px;
+    background: #fff;
+    z-index: 12;
+    /*padding:15px;*/
+    box-sizing: border-box;
+    display: none;
+    transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    /* IE 9 */
+    -moz-transform: translateX(-50%);
+    /* Firefox */
+    -webkit-transform: translateX(-50%);
+    /* Safari 和 Chrome */
+    -o-transform: translateX(-50%);
+}
+
+.getCodeImgTi {
+    font-size: 13px;
+    padding: 12px 15px;
+    text-align: center;
+}
+
+.getCodeImgWrap .pic_warp {
+    padding: 0 15px;
+}
+
+.getCodeImgWrap .pic_code {
+    width: auto;
+    height: auto;
+    line-height: normal;
+    right: 5px;
+    top: 9px;
+}
+
+.getCodeImgWrap .pic_code img {
+    width: 56px;
+}
+
+.getCodeImgWrap .inptxt {
+    width: 60%;
+}
+
+.getCodeImgWrap .label {
+    border: 1px solid #d9d9d9;
+}
+
+.getCodeImgWrap .inptxt {
+    height: 36px;
+}
+
+.getCodeImgWrap .cleanInputRr {
+    right: 60px;
+    top: 0;
+}
+
+.getCodeImgBtn {
+    border-top: 1px solid #d9d9d9;
+}
+
+.getCodeImgBtn span {
+    display: inline-block;
+    width: 50%;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.getCodeImgBtn span.getCodeImgBtnCancle {
+    color: #666;
+    border-right: 1px solid #d9d9d9;
+}
+
+.getCodeImgBtn span.getCodeImgBtnConfirm {
+    color: #ff4664;
+}
+
+.getCodeImgWrap .formtip {
+    padding: 7px 0;
+}
+
+.phoneLoginTip {
+    font-size: 12px;
+    text-align: center;
+    color: #ff4664;
+    padding-top: 5px;
+}
+
+.userLocal {
+    text-align: right;
+    padding-top: 5px;
+    margin: 0;
+}
+
+.getPhoneCodeYes {
+    color: #333;
+}
+
+.passwordEyes {
+    height: 45px;
+    width: 35px;
+    background: url(http://m.yougou.com/images/login/black.png) center center no-repeat;
+    background-size: 20px auto;
+    position: absolute;
+    top: 0;
+    right: 10px;
+}
+
+.passwordEyesHover {
+    background: url(http://m.yougou.com/images/login/show.png) center center no-repeat;
+    background-size: 20px auto;
+}
+
+.userPassword {
+    position: relative;
+}
+
+.userPassword .inptxt {
+    padding-right: 64px;
+}
+
+.userPassword .cleanInputRR {
+    right: 64px;
+}
+
+.phoneLoginHide {
+    display: none;
+}
+
+.getCodeImgWrap .labelNo {
+    border: 1px solid #ff4664;
+}
+
+.pic_warp {
+    position: relative;
+}
+
+.cleanInputR90 {
+    right: 90px;
+}
