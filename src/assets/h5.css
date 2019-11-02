@@ -431,7 +431,6 @@ header .title {
 	width: 68%;
 	text-overflow: ellipsis;
 	margin: 0 auto;
-	padding-top:1rem;
 }
 
 header .lftarea img {
@@ -2274,7 +2273,8 @@ nav a {
 }
 
 .noresult p, .srch_no_lst del {
-	font-size: 1.2em
+	font-size: 1em;
+	color:#666;
 }
 
 .srch_hotarea a {

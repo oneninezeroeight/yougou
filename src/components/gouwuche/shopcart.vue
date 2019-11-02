@@ -57,6 +57,7 @@
                                 <!-- 删除按钮 -->
                                 <span @click="delItem(item.productId,$event)" class="delpro shopProDel"></span>
                             </p>
+                            <div v-if="wapip" id="waptipBg" class="waptipBg"></div>
                         </div>
                     </div>
                 </div>
@@ -93,7 +94,6 @@ export default {
         return {
             cartList:[],
             isShopCheck: false,
-            
         }
     },
     methods:{
@@ -139,8 +139,8 @@ export default {
     },
     computed:{
         token(){
-            return '1'; 
-            // return store.get('user_session');
+            // return '1'; 
+            return store.get('user_session');
         },
         checkedItemCount(){
             return this.cartList.reduce((accumulator,curVal) => {

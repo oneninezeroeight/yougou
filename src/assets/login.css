@@ -334,7 +334,7 @@ input.btn_org[type="button"],
 }
 
 .loginother-Foot .share-foot {
-    margin: 0 40px;
+    margin: 0 38px;
     position: relative;
     text-align: center;
 }
@@ -349,7 +349,7 @@ input.btn_org[type="button"],
 }
 
 .loginother-Foot .share-foot p {
-    width: 32.333333%;
+    width: 33%;
     display: inline-block;
 }
 

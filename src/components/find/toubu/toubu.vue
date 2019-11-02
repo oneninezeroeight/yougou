@@ -8,7 +8,7 @@
       </div>
       <h2 class="title" id="tit"><slot></slot></h2>
       <div class="sitebar">
-        <router-link :to="{name:'login'}"  class="main">登录</router-link>
+        <router-link v-if="!$store.state.isLoggedin" :to="{name:'login'}"  class="main">登录</router-link>
         <a @click="mainNav" href="#" id="mainnav">
           <img src="http://m.yougou.com/images/ico-menu.png" width="20" alt="menu" />
         </a>
@@ -26,6 +26,7 @@
   </div>
 </template>
 <script>
+import store from 'store'
 export default {
   data(){
     return {
@@ -36,6 +37,7 @@ export default {
         {id:2,title:"购物车",url:"cart"},
         {id:3,title:"我的优购",url:"mine"}
       ],
+      isLoggedin: false
       // changRed:2
     }
   },
@@ -51,7 +53,6 @@ export default {
 </script>
 <style lang="scss" scoped>
   #tit{
-    padding-top:0.8rem;
     font-size: 1.3rem;
   }
   header {

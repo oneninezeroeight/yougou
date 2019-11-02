@@ -3,7 +3,7 @@
         <div class="loginbar">
             <span class="loginSpan">
                 <router-link :to="{name:'login'}">
-                <a class="loginLink">{{title}}</a>
+                <a class="loginLink">登录</a>
                 <em>|</em>
                 <a class="loginLink">{{name}}</a>
                 </router-link>
@@ -35,6 +35,8 @@ export default {
         position: relative;
         height:13rem;
         width:100%;
+        top:1rem;
+        z-index: 1000;
     }
     .loginbar{
         height:3rem;

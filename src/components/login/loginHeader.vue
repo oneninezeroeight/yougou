@@ -1,7 +1,7 @@
 <template>
     <header>
         <div class="lftarea">
-            <a href="javascript:history.go(-1);"><img src="http://m.yougou.com/images/new-back.png" width="15" alt=""></a>
+            <a href="javascript:;" @click="toBack"><img src="http://m.yougou.com/images/new-back.png" width="15" alt=""></a>
         </div>
         <h2 class="title">登录</h2>
     </header>
@@ -9,6 +9,12 @@
 </template>
 <script>
     export default {
-        
+        methods: {
+            toBack() {
+                console.log(111);
+                
+                this.$router.push({path: '/'})
+            }
+        }
     };
 </script>

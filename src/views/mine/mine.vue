@@ -25,6 +25,11 @@ export default {
     Qianbao,
     List,
     Footerw
+  },
+  mounted() {
+    if(this.$store.state.isLoggedin == false) {
+      this.$router.push({path: '/login'})
+    }
   }
 };
 </script>

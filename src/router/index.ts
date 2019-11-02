@@ -1,7 +1,6 @@
 import Vue from "vue";
-import VueRouter from "vue-router";
+import VueRouter, { NavigationGuard, Route } from "vue-router";
 import Contact from "../views/contact/contact.vue";
-
 Vue.use(VueRouter);
 
 const routes = [
@@ -67,5 +66,6 @@ const router = new VueRouter({
   base: process.env.BASE_URL,
   routes
 });
+
 
 export default router;
