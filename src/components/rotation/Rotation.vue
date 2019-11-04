@@ -2,12 +2,15 @@
   <div>
     <template>
       <swiper :options="swiperOption">
-        <swiper-slide v-for="(item,index) in taber" :key="index">
+        <swiper-slide v-for="(item, index) in taber" :key="index">
           <a target="_blank">
             <img :src="item.imgUrl" />
           </a>
         </swiper-slide>
-        <div class="swiper-pagination swiper-pagination-bullets" slot="pagination"></div>
+        <div
+          class="swiper-pagination swiper-pagination-bullets"
+          slot="pagination"
+        ></div>
       </swiper>
     </template>
   </div>
@@ -61,8 +64,6 @@ export default {
   }
 };
 </script>
-
- 
 
 <style scoped>
 .swiper-pagination-bullet-custom {

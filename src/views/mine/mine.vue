@@ -1,10 +1,10 @@
 <template>
   <div id="box">
     <Toubu>我的优购</Toubu>
-    <Module/>
-    <Dingdan/>
-    <Qianbao/>
-    <List/>
+    <Module />
+    <Dingdan />
+    <Qianbao />
+    <List />
     <Footerw></Footerw>
   </div>
 </template>
@@ -25,11 +25,6 @@ export default {
     Qianbao,
     List,
     Footerw
-  },
-  mounted() {
-    if(this.$store.state.isLoggedin == false) {
-      this.$router.push({path: '/login'})
-    }
   }
 };
 </script>

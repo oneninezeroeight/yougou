@@ -1,161 +1,197 @@
 <template>
-<div>
-<section class="srch_order">
-    <div class="aList">
-      <a href="javascript:void(0);"  class="zongHN" :class="{fst:offset==0}" @click="sortByCommon">综合</a>
-    </div>
-    <div class="aList">
-      <a href="javascript:void(0);">销量</a>
-    </div>
-    <div class="aList" @click="sortByPrice($event)" >
-      <a href="javascript:void(0);" :class="{fst:offset==2}">
-        价格
-        <span class="arrow">
-          <img :src="arrowImgUrl" width="8" alt />
-          <input id="hiddenPriceOrderBy" type="hidden" name="priceOrderBy" value="pa" />
-        </span>
-      </a>
-    </div>
-    <div class="aList">
-      <a href="javascript:void(0);">新品</a>
-    </div>
-    <div class="aList">
-      <a href="javascript:void(0);" id="cd-menu-trigger" style=" padding-left:0;">
-        筛选
-        <span class="arrow">
-          <img class="shaiNA"
-            src="//i1.ygimg.cn/pics/mobile/appointment/searchP/select.png"
-            width="10" alt />
-        </span>
-      </a>
-    </div>
-  </section>
-<div class="srch_result_list" ref="list">
-	<ul id="nextPageData" class="srch_list clearfix">
-		<li v-for="item in products" :key="item.productId">
-            <section class="listW">
-                <a href="javascript:;" :id="item.productId" @click="toDetailPage(item.productId)">
-                    <img :src="item.imgUrl"  width="86" class="lazy" style="display: inline;">
-                    <span class="topics_pname topics_pnameN">
-						{{item.name}}</span>
-                </a>
-                <p>
-
-			<span class="price">¥{{item.price}}</span>
-                <del class="delPrice">{{item.delPrice==""?"":"¥"+item.delPrice}}</del>
-                <del class="plusPrice">{{item.plusPrice==""?"":"¥"+item.plusPrice}}</del>
-             </p>					
- 			 <p class="saleInfo">
-                  <span :class="{onSale:item.isOnSale}">{{item.isOnSale==true?'秒杀':''}}</span>
-              </p>
-            </section>
+  <div>
+    <section class="srch_order">
+      <div class="aList">
+        <a
+          href="javascript:void(0);"
+          class="zongHN"
+          :class="{ fst: offset == 0 }"
+          @click="sortByCommon"
+          >综合</a
+        >
+      </div>
+      <div class="aList">
+        <a href="javascript:void(0);">销量</a>
+      </div>
+      <div class="aList" @click="sortByPrice($event)">
+        <a href="javascript:void(0);" :class="{ fst: offset == 2 }">
+          价格
+          <span class="arrow">
+            <img :src="arrowImgUrl" width="8" alt />
+            <input
+              id="hiddenPriceOrderBy"
+              type="hidden"
+              name="priceOrderBy"
+              value="pa"
+            />
+          </span>
+        </a>
+      </div>
+      <div class="aList">
+        <a href="javascript:void(0);">新品</a>
+      </div>
+      <div class="aList">
+        <a
+          href="javascript:void(0);"
+          id="cd-menu-trigger"
+          style=" padding-left:0;"
+        >
+          筛选
+          <span class="arrow">
+            <img
+              class="shaiNA"
+              src="//i1.ygimg.cn/pics/mobile/appointment/searchP/select.png"
+              width="10"
+              alt
+            />
+          </span>
+        </a>
+      </div>
+    </section>
+    <div class="srch_result_list" ref="list">
+      <ul id="nextPageData" class="srch_list clearfix">
+        <li v-for="item in products" :key="item.productId">
+          <section class="listW">
+            <a
+              href="javascript:;"
+              :id="item.productId"
+              @click="toDetailPage(item.productId)"
+            >
+              <img
+                :src="item.imgUrl"
+                width="86"
+                class="lazy"
+                style="display: inline;"
+              />
+              <span class="topics_pname topics_pnameN"> {{ item.name }}</span>
+            </a>
+            <p>
+              <span class="price">¥{{ item.price }}</span>
+              <del class="delPrice">{{
+                item.delPrice == "" ? "" : "¥" + item.delPrice
+              }}</del>
+              <del class="plusPrice">{{
+                item.plusPrice == "" ? "" : "¥" + item.plusPrice
+              }}</del>
+            </p>
+            <p class="saleInfo">
+              <span :class="{ onSale: item.isOnSale }">{{
+                item.isOnSale == true ? "秒杀" : ""
+              }}</span>
+            </p>
+          </section>
         </li>
-	</ul>
-</div>
-</div>
+      </ul>
+    </div>
+  </div>
 </template>
 <script>
-import observer from "../../tool/observer"
-import BScroll from 'better-scroll'
-    import axios from 'axios'
-    export default {
-        name: 'Panel',
-        data() {
-            return {
-                products: null,
-                scroll: null,
-                page:1,
-                sortFlag: true,
-                arrowImgUrl: '//i1.ygimg.cn/pics/mobile/appointment/searchP/gray.png',
-                offset: 0,
-                searchText:""
-            }
-        },
-        methods: {
-            getProducts(){
-                let brandId = this.$route.params.brandId;
-                return axios.get('http://10.3.142.130:8088/api/brand/'+brandId +'/'+this.page).then((res)=>{
-                    this.products = res.data;
-                })
-            },
-            toDetailPage(id) {
-                this.$router.push({path:'/product/'+id});
-            },
-            sortByPrice(e){
-                console.log(e);
-                
-                let products = Array.isArray(this.products) && this.products.sort((a,b) => {
-                   return a.price - b.price
-                });
-
-                this.products = this.sortFlag==true?products:products.reverse()
-                this.arrowImgUrl = this.sortFlag==true?'//i1.ygimg.cn/pics/mobile/appointment/searchP/up-red.png':'//i1.ygimg.cn/pics/mobile/appointment/searchP/down-red.png';
-                this.offset = 2;
-                this.sortFlag = !this.sortFlag;
-            },
-            sortByCommon(){
-                this.offset = 0;
-                this.$router.push({fullPath:window.location.href})
-            }
-        },
-        created(){
-            this.getProducts();
-            this.$nextTick(() => {
-                
-                this.scroll = new BScroll(this.$refs.list,{
-                    probeType:2,
-                    pullUpLoad: true,
-                    click: true
-                });
-                this.scroll.on('pullingUp',async () => {
-                    this.page = this.page+1;
-                    await this.getProducts()
-                    await this.scroll.finishPullUp();
-                })
-            })
-        },
-        computed:{
-          addComputed(){
-            if (this.searchText) {
-                return this.products.filter((item) => {
-                    if (item.name.indexOf(this.searchText) != -1) {
-                        return item
-                    }
-                })
-            }
-            else {
-                return this.products
-            }
-          }
-        },
-        mounted(){
-          observer.on("setSeatchText",(searchText) => {
-            this.searchText = searchText;
-          })
-        }
+import observer from "../../tool/observer";
+import BScroll from "better-scroll";
+import request from "../../common/axios";
+export default {
+  name: "Panel",
+  data() {
+    return {
+      products: null,
+      scroll: null,
+      page: 1,
+      sortFlag: true,
+      arrowImgUrl: "//i1.ygimg.cn/pics/mobile/appointment/searchP/gray.png",
+      offset: 0,
+      searchText: ""
     };
+  },
+  methods: {
+    getProducts() {
+      let brandId = this.$route.params.brandId;
+      return request({
+        url: "/api/brand/" + brandId + "/" + this.page
+      }).then(res => {
+        this.products = res.data;
+      });
+    },
+    toDetailPage(id) {
+      this.$router.push({ path: "/product/" + id });
+    },
+    sortByPrice(e) {
+      let products =
+        Array.isArray(this.products) &&
+        this.products.sort((a, b) => {
+          return a.price - b.price;
+        });
+
+      this.products = this.sortFlag == true ? products : products.reverse();
+      this.arrowImgUrl =
+        this.sortFlag == true
+          ? "//i1.ygimg.cn/pics/mobile/appointment/searchP/up-red.png"
+          : "//i1.ygimg.cn/pics/mobile/appointment/searchP/down-red.png";
+      this.offset = 2;
+      this.sortFlag = !this.sortFlag;
+    },
+    sortByCommon() {
+      this.offset = 0;
+      console.log(window.location);
+      window.location.reload();
+    }
+  },
+  created() {
+    this.getProducts();
+    this.$nextTick(() => {
+      this.scroll = new BScroll(this.$refs.list, {
+        probeType: 2,
+        pullUpLoad: true,
+        click: true
+      });
+      this.scroll.on("pullingUp", async () => {
+        this.page = this.page + 1;
+        await this.getProducts();
+        await this.scroll.finishPullUp();
+      });
+    });
+  },
+  computed: {
+    addComputed() {
+      if (this.searchText) {
+        return this.products.filter(item => {
+          if (item.name.indexOf(this.searchText) != -1) {
+            return item;
+          }
+        });
+      } else {
+        return this.products;
+      }
+    }
+  },
+  mounted() {
+    observer.on("setSeatchText", searchText => {
+      this.searchText = searchText;
+    });
+  }
+};
 </script>
 <style lang="scss">
-    html,body {
-     height: 100%;
-    }
-    #app {
-        height: 100%;
-    }
-    .srch_result_list {
-        position: relative;
-        left: 0;
-        top: 0;
-        height: 100vh;
-        overflow: hidden;
-        li {
-            height: 270px;
-        }
-    }
-    .clearfix li span{
-        line-height: 24px!important;
-        height: 24px!important;
-    }
+html,
+body {
+  height: 100%;
+}
+#app {
+  height: 100%;
+}
+.srch_result_list {
+  position: relative;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  overflow: hidden;
+  li {
+    height: 270px;
+  }
+}
+.clearfix li span {
+  line-height: 24px !important;
+  height: 24px !important;
+}
 
 body {
   background: #ffffff;

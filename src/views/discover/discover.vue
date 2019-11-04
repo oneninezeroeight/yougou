@@ -1,7 +1,7 @@
 <template>
   <div id="box">
     <Toubu>发现</Toubu>
-    <SectionFo/>
+    <SectionFo />
   </div>
 </template>
 

@@ -1,7 +1,7 @@
 <template>
   <div id="box">
     <Toubu>消息盒子</Toubu>
-    <SectionFo/>
+    <SectionFo />
   </div>
 </template>
 

@@ -1,6 +1,8 @@
 import Vue from "vue";
 import VueRouter, { NavigationGuard, Route } from "vue-router";
 import Contact from "../views/contact/contact.vue";
+import store from "../store/index";
+import xSTORE from "store";
 Vue.use(VueRouter);
 
 const routes = [
@@ -67,5 +69,19 @@ const router = new VueRouter({
   routes
 });
 
+router.beforeEach((to, from, next) => {
+  let isLoggedIn =
+    xSTORE.get("user_session") != undefined &&
+    xSTORE.get("user_session").length > 0;
+  store.commit("enLogIn", isLoggedIn);
+  store.commit("mainNavShow_2", false);
+
+  if (to.path == "/mine" && isLoggedIn == false) {
+    next({ path: "/login" });
+    return;
+  }
+
+  next();
+});
 
 export default router;

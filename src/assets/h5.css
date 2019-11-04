@@ -54,7 +54,7 @@ button, input[type=text], input[type=reset], input[type=button], input[type=subm
 }
 
 .footerInfor a:link, .footerInfor a:visited {
-	color: #a0a0a0
+	color: #a0a0a0;
 }
 
 /* a, body {
@@ -505,7 +505,8 @@ footer {
 }
 
 .footerInfor, .footerInfor a, .footerNav {
-	color: #a0a0a0
+	color: #a0a0a0;
+	font-size: 0.9rem;
 }
 
 .version p a, footer .version {
@@ -541,7 +542,8 @@ footer .version a {
 	color: #666;
 	display: inline-block;
 	line-height: 22px;
-	padding: 1px 3px
+	padding: 1px 3px;
+	font-size:0.4rem;
 }
 
 .loginbar a.footerScrollTop {

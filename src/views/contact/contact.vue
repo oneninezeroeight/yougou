@@ -1,16 +1,16 @@
 <template>
   <div id="box">
     <Header class="header" />
-      <Rotation />
-      <Boar />
-      <Banner />
-      <Ygswiper />
-      <Pinpai />
-      <Seckill />
-      <YgIndexAd />
-      <YgIndexAdb />
-      <Footer></Footer>
-    <Tabber/>
+    <Rotation />
+    <Boar />
+    <Banner />
+    <Ygswiper />
+    <Pinpai />
+    <Seckill />
+    <YgIndexAd />
+    <YgIndexAdb />
+    <Footer></Footer>
+    <Tabber />
   </div>
 </template>
 
@@ -47,6 +47,6 @@ export default {
 #box {
   position: relative;
   display: flex;
-  flex-direction: column
+  flex-direction: column;
 }
 </style>

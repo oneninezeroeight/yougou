@@ -4,14 +4,14 @@
       <div
         :class="['loginType', { loginTypeHover: isPhoneLogin }]"
         logintype="phoneLogin"
-        @click="changeLoginType"
+        @click="changeLoginType(true)"
       >
         <span>手机号快捷登录<span></span></span>
       </div>
       <div
         :class="['loginType', { loginTypeHover: !isPhoneLogin }]"
         logintype="normalLogin"
-        @click="changeLoginType"
+        @click="changeLoginType(false)"
       >
         <span>账号密码登录</span>
       </div>
@@ -119,7 +119,7 @@
           </div>
         </div>
       </form>
-      <div class="button_area " @click="login">
+      <div class="button_area " @click="toLogin">
         <input
           v-if="!canLogin"
           type="button"
@@ -144,7 +144,9 @@
   </div>
 </template>
 <script>
-import axios from "axios";
+import request from "../../common/axios";
+
+// import { setLocalStorage } from "../../common/store";
 import store from "store";
 export default {
   data() {
@@ -184,12 +186,10 @@ export default {
   },
   created() {
     this.phoneInfo = "";
-    store.remove('user_session');
-    this.$store.commit('enLogIn',false)
   },
   methods: {
-    changeLoginType() {
-      this.isPhoneLogin = !this.isPhoneLogin;
+    changeLoginType(bool) {
+      this.isPhoneLogin = bool;
     },
     inputClick(e) {
       e.target.parentNode.nextSibling.style.display = "block";
@@ -218,12 +218,11 @@ export default {
       if (this.canGetVertificationCode) {
         let code = Math.floor(Math.random() * 8998 + 1000);
         console.log(code);
-        
+
         this.verifyCode = code;
-          setTimeout(() => {
-            this.verifyCode = "xxxx";
-          }, 1000 * 60 * 3);
-        
+        setTimeout(() => {
+          this.verifyCode = "xxxx";
+        }, 1000 * 60 * 3);
 
         let s = 60;
         let timer = setInterval(() => {
@@ -253,61 +252,43 @@ export default {
       }
       return flag;
     },
-    login() {
+    toLogin() {
       if (!this.canLogin) {
         return false;
       } else {
+        let _this = this;
         if (this.isPhoneLogin) {
-          //一定登录成功，拿到返回的token就完事
-          axios({
-            method: "post",
-            url: "http://10.3.142.130:8088/api/loginGet",
-            data: {
-              phone: this.phone
+          //登录成功，拿到返回的token
+          request({
+            url: "/api/loginGet",
+            params: {
+              phone: _this.phone
             }
           }).then(result => {
-            let token = result.data.token;
-            store.set("user_session", token);
-            this.$router.push({ path: "/" });
+            store.set("user_session", result.data.token);
+            _this.$router.push({ path: "/" });
           });
         } else {
           //检查密码对不对,对=>返回token
-          axios({
+          request({
             method: "post",
-            url: "http://10.3.142.130:8088/api/loginFind",
+            url: "/api/loginFind",
             data: {
-              phone: this.username,
-              password: this.password
+              phone: _this.username,
+              password: _this.password
             }
           }).then(result => {
             if (result.data.status == "fail") {
-              this.passwordInfo = "登陆失败，用户名或密码错误";
+              _this.passwordInfo = "登陆失败，用户名或密码错误";
             } else if (result.data.status == "success") {
               let token = result.data.token;
               store.set("user_session", token);
-              this.$router.push({ path: "/" });
+              _this.$router.push({ path: "/" });
             }
           });
         }
-        this.$store.commit('enLogIn',true)
+        this.$store.commit("enLogIn", true);
       }
-    },
-    formatterDateTime() {
-      var date = new Date();
-      var month = date.getMonth() + 1;
-      var datetime =
-        date.getFullYear() +
-        "" + // "年"
-        (month >= 10 ? month : "0" + month) +
-        "" + // "月"
-        (date.getDate() < 10 ? "0" + date.getDate() : date.getDate()) +
-        "" +
-        (date.getHours() < 10 ? "0" + date.getHours() : date.getHours()) +
-        "" +
-        (date.getMinutes() < 10 ? "0" + date.getMinutes() : date.getMinutes()) +
-        "" +
-        (date.getSeconds() < 10 ? "0" + date.getSeconds() : date.getSeconds());
-      return datetime;
     }
   }
 };

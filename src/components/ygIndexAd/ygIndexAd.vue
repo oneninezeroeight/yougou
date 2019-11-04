@@ -34,9 +34,9 @@ export default {
 <style lang="scss" scoped>
 #sectionName {
   position: relative;
-  top:1rem;
+  top: 1rem;
 }
-.swiper{
+.swiper {
   overflow: scroll;
   display: flex;
 }
@@ -52,7 +52,7 @@ export default {
   margin-top: 2.533333rem;
   height: 11.666667rem;
   background: #fff;
-  flex:none;
+  flex: none;
 }
 .swiperImg {
   padding-left: 0.933333rem;

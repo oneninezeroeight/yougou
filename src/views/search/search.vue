@@ -11,12 +11,12 @@ import Searchw from "@/components/searchw/searchw.vue";
 export default {
   components: {
     Searcher,
-    Searchw,
+    Searchw
   }
 };
 </script>
 <style lang="scss">
-  body{
-    background:#fff!important;
-  }
+body {
+  background: #fff !important;
+}
 </style>

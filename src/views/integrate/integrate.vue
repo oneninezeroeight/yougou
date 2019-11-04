@@ -1,7 +1,7 @@
 <template>
   <div id="box">
     <Tou></Tou>
-    <Content/>
+    <Content />
   </div>
 </template>
 

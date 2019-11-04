@@ -77,16 +77,16 @@ export default {
   color: #666;
 }
 .goFont {
-  margin-top:-0.5rem;
+  margin-top: -0.5rem;
   color: #666;
 }
-.weui-panel__bd{
-  height:12.9rem;
-  margin-top:1rem;
-  margin-left:0.5rem;
+.weui-panel__bd {
+  height: 12.9rem;
+  margin-top: 1rem;
+  margin-left: 0.5rem;
 }
-.weui-media-box{
-  height:5.9rem;
+.weui-media-box {
+  height: 5.9rem;
 }
 .weui-media-box__desc {
   color: #9446ff;
